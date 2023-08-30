@@ -12,15 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b413607cc40e36145b71b530167e2e29, type: 3}
   m_Name: PlayerData_SO
   m_EditorClassIdentifier: 
-  playerID: 0
   playerName: 
   playerIcon: {fileID: 0}
   playerOnWorldSprite: {fileID: 0}
   playerDescription: 
-  playerHp: 0
-  playerSpeed: 0
-  playerDamage: 0
-  playerAttackCD: 0
+  playerNutrition: 5000
+  playerTired: 0
+  playerEmotion: 0
+  playerPressure: 0
+  playerPain: 0
+  playerConfidence: 0
+  playerConcentration: 5000
+  playerCharm: 0
+  playerGlamour: 0
+  playerClimax: 0
+  playerFatigueStateType: 0
   isDead: 0
   attackable: 0
   removable: 0

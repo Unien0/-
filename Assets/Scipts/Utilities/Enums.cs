@@ -10,3 +10,10 @@ public enum ItemType
     Consumables
 
 }
+
+public enum FatigueStateType
+{
+    Sleep,Rest,Sober, Motion
+    //睡眠，休息，清醒，运动（根据事件决定消耗）
+}
+
