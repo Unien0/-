@@ -10,8 +10,8 @@ public class PlayerData_SO : ScriptableObject
     public string playerName;
     public Sprite playerIcon;
     public Sprite playerOnWorldSprite;
-    public string playerDescription;//玩家介绍
-
+    [Multiline]public string playerDescription;//玩家介绍
+    [Space(10)]
     [Header("基础数据")]
     [Header("营养,初始为5000")]
     [Range(0,5000)]public int playerNutrition;//营养
@@ -33,35 +33,44 @@ public class PlayerData_SO : ScriptableObject
     [Range(0, 5000)] public int playerGlamour;//魅惑
     [Header("高潮，初始为0")]
     [Range(0, 1000)] public int playerClimax;//高潮
-
+    [Space(10)]
     [Header("角色状态")]
     [Header("疲劳状态，睡眠-250/h，休息-150/10min，清醒+1/min，运动（另算）")]
     public FatigueStateType fatigueStateType;
+    [Header("营养状态，日常行动-1/min，运动或体力劳动-4/min，饥饿状态下压力随之增长")]
+    public StarvationType starvationType;
+    [Header("疼痛状态，日常行动-10/h，睡眠-20/h，治疗后-50/h，在疼痛超过100时无法战斗")]
+    public PainStateType painStateType;
+    [Header("异常状态")]
+    public AbnormalStateType abnormalStateType;
 
-
+    [Space(10)]
     [Header("成长属性经验，最高经验值未定，最高等级10级")]
-    [Header("容貌，初始为0")]
+    [Header("容貌，初始为0,容貌影响魅力与吸引力")]
     public int beautiful;
     [Range(0, 10)] public int beautifulLevel;
-    [Header("体能，初始为0")]
+    [Header("体能，初始为0，体能影响战斗")]
     public int physicalFitness;
     [Range(0, 10)] public int physicalFitnessLevel;
-    [Header("意志，初始为0")]
+    [Header("意志，初始为0，意志影响疼痛和抗性")]
     public int volition;
     [Range(0, 10)] public int volitionLevel;
-    [Header("学识，初始为0")]
+    [Header("支配，初始为0，支配影响主动")]
+    public int dominate;
+    [Range(0, 10)] public int dominateLevel;
+    [Header("学识，初始为0，学识影响学习能力与技术力")]
     public int knowledge;
     [Range(0, 10)] public int knowledgeLevel;
-    [Header("淫乱，初始为0")]
+    [Header("淫乱，初始为0，淫乱影响色情行为时的选项和结果")]
     public int promiscuous;
     [Range(0, 10)] public int promiscuousLevel;
-    [Header("露出，初始为0")]
+    [Header("露出，初始为0，露出影响露出的意愿度")]
     public int exhibitionism;
     [Range(0, 10)] public int exhibitionismLevel;
-    [Header("异种，初始为0")]
+    [Header("异种，初始为0，异种影响异种行为时的选项和结果")]
     public int xenogenesis;
     [Range(0, 10)] public int xenogenesisLevel;
-
+    [Space(10)]
     [Header("角色技能，最高经验值未定，最高等级10级")]
     [Header("田径跑步，初始为0")]
     public int trackFieldSkill;
@@ -90,7 +99,7 @@ public class PlayerData_SO : ScriptableObject
     [Header("偷窃，初始为0")]
     public int stealSkill;
     [Range(0, 10)] public int stealSkillLevel;
-
+    [Space(10)]
     [Header("学历等级，最高经验值未定，最高等级10级")]
     [Header("文学，初始为0")]
     public int literature;
@@ -107,7 +116,7 @@ public class PlayerData_SO : ScriptableObject
     [Header("地理，初始为0")]
     public int geography;
     [Range(0, 10)] public int geographyLevel;
-
+    [Space(10)]
     [Header("性技，最高经验值未定，最高等级10级")]
     [Header("口，初始为0")]
     public int oralTechnique;
